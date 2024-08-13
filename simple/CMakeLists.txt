@@ -1,0 +1,5 @@
+if(NOT DEFINED EMSCRIPTEN)
+  add_library(calc SHARED calc.cpp)
+  add_executable(simple main.cpp)
+  target_link_libraries(simple PRIVATE calc)
+endif()

@@ -1,0 +1,18 @@
+{
+  "lint": {
+    "exclude": [
+      "build/"
+    ]
+  },
+  "tasks": {
+    "clean:release": "rm -rf build/release",
+    "test": "deno task clean:release && deno task build:wasm-release && deno test --allow-read=./build --parallel --shuffle",
+    "check": "deno fmt --check && deno lint && deno check --remote **/*.ts",
+    "fix": "deno fmt && deno lint --fix && deno check --remote **/*.ts",
+    "build:wasm-release": "cmake --preset wasm-release && cmake --build --preset build"
+  },
+  "imports": {
+    "@core/unknownutil": "jsr:@core/unknownutil@^4.1.0",
+    "@std/assert": "jsr:@std/assert@^1.0.2"
+  }
+}

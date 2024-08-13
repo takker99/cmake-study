@@ -1,0 +1,7 @@
+{
+  "deno.enable": true,
+  "[cmake]": {
+    "editor.defaultFormatter": "cheshirekow.cmake-format"
+  },
+  "cmake.ignoreKitEnv": true
+}

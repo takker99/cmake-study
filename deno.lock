@@ -1,0 +1,33 @@
+{
+  "version": "3",
+  "packages": {
+    "specifiers": {
+      "jsr:@core/unknownutil@^4.1.0": "jsr:@core/unknownutil@4.1.0",
+      "jsr:@std/assert@^1.0.2": "jsr:@std/assert@1.0.2",
+      "jsr:@std/internal@^1.0.1": "jsr:@std/internal@1.0.1"
+    },
+    "jsr": {
+      "@core/unknownutil@4.1.0": {
+        "integrity": "f3d4e99a26c3bc5b371087e8b2cbc8752100534ff0f1ab8ca29688187c241472"
+      },
+      "@std/assert@1.0.2": {
+        "integrity": "ccacec332958126deaceb5c63ff8b4eaf9f5ed0eac9feccf124110435e59e49c",
+        "dependencies": [
+          "jsr:@std/internal@^1.0.1"
+        ]
+      },
+      "@std/internal@1.0.1": {
+        "integrity": "6f8c7544d06a11dd256c8d6ba54b11ed870aac6c5aeafff499892662c57673e6"
+      }
+    }
+  },
+  "remote": {
+    "https://cdn.jsdelivr.net/npm/binaryen@117.0.0/index.min.js": "49788047581afb169bd92b14fc678103139e99e1c4de85a19f22234dba998d44"
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@core/unknownutil@^4.1.0",
+      "jsr:@std/assert@^1.0.2"
+    ]
+  }
+}
