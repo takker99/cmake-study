@@ -45,6 +45,7 @@ if(EMSCRIPTEN)
 
   add_subdirectory(wasm)
   add_subdirectory(wasm-callback)
+  add_subdirectory(wasm-wget)
 else()
   add_subdirectory(simple)
 endif()
