@@ -22,9 +22,7 @@ if(EMSCRIPTEN)
       -sPOLYFILL=0
       -sWASM_BIGINT=1
       -sAUTO_JS_LIBRARIES=0
-
-      -sAUTO_NATIVE_LIBRARIES=0
-      -sALLOW_UNIMPLEMENTED_SYSCALLS=1)
+      -sAUTO_NATIVE_LIBRARIES=0)
 
   if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     set(EM_LINK_FLAGS
@@ -46,6 +44,7 @@ if(EMSCRIPTEN)
   include_directories(${VCPKG_INCLUDE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
 
   add_subdirectory(wasm)
+  add_subdirectory(wasm-callback)
 else()
   add_subdirectory(simple)
 endif()

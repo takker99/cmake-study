@@ -3,12 +3,20 @@
   "packages": {
     "specifiers": {
       "jsr:@core/unknownutil@^4.1.0": "jsr:@core/unknownutil@4.1.0",
+      "jsr:@kitsonk/xhr@^0.4.3": "jsr:@kitsonk/xhr@0.4.3",
       "jsr:@std/assert@^1.0.2": "jsr:@std/assert@1.0.2",
-      "jsr:@std/internal@^1.0.1": "jsr:@std/internal@1.0.1"
+      "jsr:@std/internal@^1.0.1": "jsr:@std/internal@1.0.1",
+      "jsr:@std/media-types@0.220": "jsr:@std/media-types@0.220.1"
     },
     "jsr": {
       "@core/unknownutil@4.1.0": {
         "integrity": "f3d4e99a26c3bc5b371087e8b2cbc8752100534ff0f1ab8ca29688187c241472"
+      },
+      "@kitsonk/xhr@0.4.3": {
+        "integrity": "c3c531a76842aa161ee7265bf2d324476a8de5a81215398db6be943994ce31be",
+        "dependencies": [
+          "jsr:@std/media-types@0.220"
+        ]
       },
       "@std/assert@1.0.2": {
         "integrity": "ccacec332958126deaceb5c63ff8b4eaf9f5ed0eac9feccf124110435e59e49c",
@@ -18,6 +26,9 @@
       },
       "@std/internal@1.0.1": {
         "integrity": "6f8c7544d06a11dd256c8d6ba54b11ed870aac6c5aeafff499892662c57673e6"
+      },
+      "@std/media-types@0.220.1": {
+        "integrity": "9dea30f7e0c87426ad8736678137ad277f1450f858efa1ef2c3aad6d9029b682"
       }
     }
   },
@@ -27,6 +38,7 @@
   "workspace": {
     "dependencies": [
       "jsr:@core/unknownutil@^4.1.0",
+      "jsr:@kitsonk/xhr@^0.4.3",
       "jsr:@std/assert@^1.0.2"
     ]
   }
