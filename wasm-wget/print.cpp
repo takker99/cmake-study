@@ -4,20 +4,18 @@
 
 extern "C"
 {
-  extern int read_data(const char *path, void *buffer, int *size, int *error_code);
-
   const char *printFetch(const char *path)
   {
     void *buffer;
     int size;
     int error_code;
-    read_data(path, &buffer, &size, &error_code);
+    emscripten_wget_data(path, &buffer, &size, &error_code);
     if (error_code != 0)
     {
-      std::cout << "Failed to read " << path << " (status code: " << error_code << ")." << std::endl;
+      std::cout << "Downloading " << path << " failed (status code: " << error_code << ")." << std::endl;
       return "";
     }
-    std::cout << "Finished reading " << size << " bytes from " << path << ":\n";
+    std::cout << "Finished downloading " << size << " bytes from URL " << path << ":\n";
     return static_cast<const char *>(buffer);
   }
 }

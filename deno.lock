@@ -2,15 +2,15 @@
   "version": "3",
   "packages": {
     "specifiers": {
-      "jsr:@core/unknownutil@^4.1.0": "jsr:@core/unknownutil@4.1.0",
+      "jsr:@core/unknownutil@^4.1.0": "jsr:@core/unknownutil@4.2.0",
       "jsr:@kitsonk/xhr@^0.4.3": "jsr:@kitsonk/xhr@0.4.3",
       "jsr:@std/assert@^1.0.2": "jsr:@std/assert@1.0.2",
       "jsr:@std/internal@^1.0.1": "jsr:@std/internal@1.0.1",
       "jsr:@std/media-types@0.220": "jsr:@std/media-types@0.220.1"
     },
     "jsr": {
-      "@core/unknownutil@4.1.0": {
-        "integrity": "f3d4e99a26c3bc5b371087e8b2cbc8752100534ff0f1ab8ca29688187c241472"
+      "@core/unknownutil@4.2.0": {
+        "integrity": "cc0609f2e9fcfd68783c8c34d588261464114770d83047e93eaa1e13732aaedb"
       },
       "@kitsonk/xhr@0.4.3": {
         "integrity": "c3c531a76842aa161ee7265bf2d324476a8de5a81215398db6be943994ce31be",

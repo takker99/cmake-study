@@ -1,6 +1,6 @@
 import "@kitsonk/xhr";
 import { assert, isSyncFunction } from "@core/unknownutil";
-import createModule from "../build/release/wasm-callback/wasm-async.mjs";
+import createModule from "../build/release/wasm-callback/wasm-callback.mjs";
 
 const { ccall } = await createModule();
 assert(ccall, isSyncFunction);

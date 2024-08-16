@@ -1,3 +1,4 @@
+/// <reference lib="deno.ns" />
 // @deno-types=https://cdn.jsdelivr.net/npm/binaryen@117.0.0/index.d.ts
 import binaryen from "https://cdn.jsdelivr.net/npm/binaryen@117.0.0/index.min.js";
 

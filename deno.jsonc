@@ -6,12 +6,16 @@
   },
   "tasks": {
     "clean:release": "rm -rf build/release",
+    "clean:debug": "rm -rf build/debug",
+    "clean": "rm -rf build",
     "run:wasm-callback": "deno run --allow-read=./build --allow-net wasm-callback/main.ts",
     "run:wasm-wget": "deno run --allow-read=./build --allow-net wasm-wget/main.ts",
+    "run:wasm-async": "deno run --allow-read=./build --allow-net wasm-async/main.ts",
     "test": "deno task clean:release && deno task build:wasm-release && deno test --allow-read=./build --parallel --shuffle",
     "check": "deno fmt --check && deno lint && deno check --remote **/*.ts",
     "fix": "deno fmt && deno lint --fix && deno check --remote **/*.ts",
-    "build:wasm-release": "cmake --preset wasm-release && cmake --build --preset build"
+    "build:wasm-debug": "cmake --preset wasm-debug && cmake --build --preset wasm-debug",
+    "build:wasm-release": "cmake --preset wasm-release && cmake --build --preset wasm-release"
   },
   "imports": {
     "@core/unknownutil": "jsr:@core/unknownutil@^4.1.0",

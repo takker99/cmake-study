@@ -20,6 +20,7 @@ if(EMSCRIPTEN)
       -sFILESYSTEM=0
       --no-entry
       -sPOLYFILL=0
+      -sTEXTDECODER=2
       -sWASM_BIGINT=1
       -sAUTO_JS_LIBRARIES=0
       -sAUTO_NATIVE_LIBRARIES=0)

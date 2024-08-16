@@ -86,10 +86,18 @@
   ],
   "buildPresets": [
     {
-      "name": "build",
+      "name": "wasm-release",
       "description": "",
       "displayName": "",
       "configurePreset": "wasm-release",
+      "verbose": true,
+      "cleanFirst": true
+    },
+    {
+      "name": "wasm-debug",
+      "description": "",
+      "displayName": "",
+      "configurePreset": "wasm-debug",
       "verbose": true,
       "cleanFirst": true
     }
