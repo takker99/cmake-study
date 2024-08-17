@@ -1,6 +1,6 @@
-#include <emscripten/wget.h>
 #include "print.hpp"
-#include <iostream>
+// #include <iostream>
+#include <cstdio>
 
 extern "C"
 {
@@ -14,10 +14,15 @@ extern "C"
     read_data(path, &buffer, &size, &error_code);
     if (error_code != 0)
     {
-      std::cout << "Failed to read " << path << " (status code: " << error_code << ")." << std::endl;
+      // std::cout << "Failed to read " << path << " (status code: " << error_code << ")." << std::endl;
+      // the above line can be rewritten using `printf` as follows:
+      printf("Failed to read %s (status code: %d).\n", path, error_code);
+
       return "";
     }
-    std::cout << "Finished reading " << size << " bytes from " << path << ":\n";
+    // std::cout << "Finished reading " << size << " bytes from " << path << ":\n";
+    // the above line can be rewritten using `printf` as follows:
+    printf("Finished reading %d bytes from %s:\n", size, path);
     return static_cast<const char *>(buffer);
   }
 }

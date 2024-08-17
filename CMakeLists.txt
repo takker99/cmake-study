@@ -13,8 +13,10 @@ if(EMSCRIPTEN)
   set(VCPKG_INCLUDE_DIR ${VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/include)
 
   set(EM_LINK_FLAGS
-      -sASSERTIONS=0
-      -sINVOKE_RUN=0
+      -sSTANDALONE_WASM=1
+      -sPURE_WASI=1
+      # -sINVOKE_RUN=1 #-sINVOKE_RUN is default to 1. You must make it 1 or
+      # invoke `callMain()` manually, if -sSTANDALONE_WASM=1
       -sALLOW_MEMORY_GROWTH=1
       -sENVIRONMENT=web
       -sFILESYSTEM=0
@@ -26,8 +28,13 @@ if(EMSCRIPTEN)
       -sAUTO_NATIVE_LIBRARIES=0)
 
   if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+    # set(EM_CPP_FLAGS ${EM_CPP_FLAGS} )
     set(EM_LINK_FLAGS
         ${EM_LINK_FLAGS}
+        -sSAFE_HEAP=1
+        # -sSAFE_HEAP_LOG=1
+        -sMALLOC=emmalloc-memvalidate-verbose
+        -sASSERTIONS=2
         -gsource-map
         "--source-map-base ./" # Debugging c++ only works in browser with
                                # "Experimental DWARF support turned on"
